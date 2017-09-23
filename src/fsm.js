@@ -44,7 +44,6 @@ class FSM {
      */
     trigger(event) {
         const newState = this.config.states[this.getState()].transitions[event];
-        console.log('newState', event, this.config.states[this.getState()], newState);
         if (!newState) {
             throw new Error('There is no state');
         }
